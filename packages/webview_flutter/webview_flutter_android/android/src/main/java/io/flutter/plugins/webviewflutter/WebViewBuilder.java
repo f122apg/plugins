@@ -12,6 +12,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import android.graphics.Color;
 
 /** Builder used to create {@link android.webkit.WebView} objects. */
 public class WebViewBuilder {
@@ -167,6 +168,7 @@ public class WebViewBuilder {
     webSettings.setBuiltInZoomControls(enableBuiltInZoomControls);
     webView.setWebChromeClient(webChromeClient);
     webView.setDownloadListener(downloadListener);
+    webView.setBackgroundColor(Color.TRANSPARENT);
     return webView;
   }
 }
